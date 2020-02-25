@@ -132,8 +132,10 @@ console.log(`Sum of numbers: ${sum}`)
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+function processProduct(num1, num2, cb) {
+  const answer = num1*num2
+  console.log(answer)
+  return cb(answer)
 }
 
 /**
