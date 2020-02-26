@@ -241,9 +241,9 @@ function getFullNames(runners) { //Works but not in the browser
  */
 function firstNamesAllCaps(runners) {
     const fNames = runners.map(function(element, i) {
-        return element.first_name.toUpperCase()
-    })
-    // console.log(fNames)
+            return element.first_name.toUpperCase()
+        })
+        // console.log(fNames)
     return (fNames)
 }
 
@@ -263,9 +263,9 @@ function firstNamesAllCaps(runners) {
 function getRunnersByTShirtSize(runners, tShirtSize) {
 
     const newArray = runners.filter(function(T) {
-        return T.shirt_size == tShirtSize
-    })
-    // console.log(newArray)
+            return T.shirt_size == tShirtSize
+        })
+        // console.log(newArray)
     return newArray
 }
 
@@ -281,9 +281,9 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
  */
 function tallyUpDonations(runners) {
 
-    return runners.reduce(function(accumulator,item){
-      return accumulator + item.donation
-    },0)
+    return runners.reduce(function(accumulator, item) {
+        return accumulator + item.donation
+    }, 0)
 
 }
 
@@ -307,27 +307,15 @@ function counterMaker() {
     // BROKEN CODE STARTS
     var count = -1;
 
-    return function counter () {
-      ++count
-        console.log(count)
-        return count
-    }
-    // BROKEN CODE ENDS
+    return function counter() {
+            ++count
+            console.log(count)
+            return count
+        }
+        // BROKEN CODE ENDS
 }
 
-// function counterMaker() {
-//   // BROKEN CODE STARTS
-//   let count = -1;
 
-//   function counter () {
-
-//       return ++count
-//   }
-//   return counter
-//   // BROKEN CODE ENDS
-// }
-// const nc = counterMaker()
-// console.log(nc())
 
 /**
  * ### Challenge `counterMakerWithLimit`
@@ -349,9 +337,22 @@ function counterMaker() {
  * counter() // should return 0
  * etc
  */
-function counterMakerWithLimit( /* CODE HERE */ ) {
-    /* CODE HERE */
+
+function counterMakerWithLimit() {
+    // BROKEN CODE STARTS
+    var count = -1;
+
+    return function counter() {
+            if (count > 2) {
+                count = -1
+            }
+            ++count
+            console.log(count)
+            return count
+        }
+        // BROKEN CODE ENDS
 }
+
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
