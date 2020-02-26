@@ -13,9 +13,9 @@
  * Example of usage of this higher-order function:
  * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'foofoo'.
-*/
+ */
 function processFirstItem(stringList, callback) {
-  return callback(stringList[0])
+    return callback(stringList[0])
 }
 
 // ⭐️ Example Challenge END ⭐️
@@ -47,10 +47,10 @@ function processFirstItem(stringList, callback) {
  * 
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
-*/
+ */
 function processLength(list, cb) {
 
-  return cb(list.length);
+    return cb(list.length);
 }
 
 /**
@@ -66,9 +66,9 @@ function processLength(list, cb) {
  * Example of usage of this higher-order function:
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
-*/
+ */
 function processLastItem(stringList, cb) {
-  return cb(stringList[stringList.length -1])
+    return cb(stringList[stringList.length - 1])
 }
 
 /**
@@ -87,20 +87,21 @@ function processLastItem(stringList, cb) {
  * 
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
-*/
+ */
 
 // function processSum(numberList, cb){
-  
+
 //   const sum = numberList.reduce((a , b)=> a + b, 0 )
 //   console.log(sum)
 //     return cb(sum);
 // }
 // Alternate notation
-function processSum(numberList, cb){
-  
-  const sum = numberList.reduce(function (a , b) { 
-    return a + b },0)
-  // console.log(sum)
+function processSum(numberList, cb) {
+
+    const sum = numberList.reduce(function(a, b) {
+            return a + b
+        }, 0)
+        // console.log(sum)
     return cb(sum);
 }
 
@@ -131,11 +132,11 @@ function processSum(numberList, cb){
  * 
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
-*/
+ */
 function processProduct(num1, num2, cb) {
-  const answer = num1*num2
-  console.log(answer)
-  return cb(answer)
+    const answer = num1 * num2
+    console.log(answer)
+    return cb(answer)
 }
 
 /**
@@ -157,10 +158,10 @@ function processProduct(num1, num2, cb) {
  * [2] Invoking `processContains` passing
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
-*/
+ */
 function processContains(item, list, cb) {
-  const bResult = list.includes(item)
-  return cb(bResult)
+    const bResult = list.includes(item)
+    return cb(bResult)
 
 }
 
@@ -182,9 +183,9 @@ function processContains(item, list, cb) {
  * 
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
-*/
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+ */
+function processDuplicateFree( /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */ ) {
+    /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -194,12 +195,12 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 // 50 small businesses to make a small donation on their behalf for some much needed
 // updates to their facilities. Each business has assigned a representative
 // to attend the event along with a small donation.
-// var runners = [
-//   { id: 1, first_name: "Charmain", last_name: "Seiler", email: "cseiler0@wired.com", shirt_size: "2XL", company_name: "Divanoodle", donation: 75 },
-//   { id: 2, first_name: "Whitaker", last_name: "Ierland", email: "wierland1@angelfire.com", shirt_size: "2XL", company_name: "Wordtune", donation: 148 },
-//   { id: 5, first_name: "dddd", last_name: "dddd", email: "wierland1@angelfire.com", shirt_size: "2XL", company_name: "Wordtune", donation: 148 },
-//   { id: 3, first_name: "Julieta", last_name: "McCloid", email: "jmccloid2@yahoo.com", shirt_size: "S", company_name: "Riffpedia", donation: 171 }
-// ]
+var runners = [
+  { id: 1, first_name: "Charmain", last_name: "Seiler", email: "cseiler0@wired.com", shirt_size: "2XL", company_name: "Divanoodle", donation: 75 },
+  { id: 2, first_name: "Whitaker", last_name: "Ierland", email: "wierland1@angelfire.com", shirt_size: "2XL", company_name: "Wordtune", donation: 148 },
+  { id: 5, first_name: "dddd", last_name: "dddd", email: "wierland1@angelfire.com", shirt_size: "2XL", company_name: "Wordtune", donation: 148 },
+  { id: 3, first_name: "Julieta", last_name: "McCloid", email: "jmccloid2@yahoo.com", shirt_size: "S", company_name: "Riffpedia", donation: 171 }
+]
 /**
  * ### Challenge `getFullNames`
  * 
@@ -209,20 +210,20 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
-*/
+ */
 
 
 function getFullNames(runners) { //Works but not in the browser
-  const full_names = []
-  runners.forEach(function (element){
-    // your code here
+    const full_names = []
+    runners.forEach(function(element) {
+        // your code here
 
-    // console.log(`${element.last_name}, ${element.first_name}`)
-    full_names.push(`${element.last_name}, ${element.first_name}`)
-  })
+        // console.log(`${element.last_name}, ${element.first_name}`)
+        full_names.push(`${element.last_name}, ${element.first_name}`)
+    })
 
-  console.log(full_names)
-  return full_names
+    console.log(full_names)
+    return full_names
 }
 
 
@@ -238,13 +239,13 @@ function getFullNames(runners) { //Works but not in the browser
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
-*/
+ */
 function firstNamesAllCaps(runners) {
-  const fNames = runners.map(function(element, i){
-    return element.first_name.toUpperCase() 
-  })
-console.log(fNames)
-return (fNames)
+    const fNames = runners.map(function(element, i) {
+        return element.first_name.toUpperCase()
+    })
+    console.log(fNames)
+    return (fNames)
 }
 
 /**
@@ -259,93 +260,99 @@ return (fNames)
  * @param tShirtSize string (possible values are "S", "M", "L", "XL", "2XL", "3XL").
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
-*/
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
-}
+ */
+function getRunnersByTShirtSize(runners, tShirtSize) {
 
-/**
- * ### Challenge `tallyUpDonations`
- * 
- * @instructions
- * The donations need to be tallied up and reported for tax purposes.
- * Implement this function using reduce().
- * 
- * @param runners array of runners like the one inside the /data/runners.js file.
- * @returns a number which is the sum of the donations by all runners.
-*/
-function tallyUpDonations(/* CODE HERE */) {
-  /* CODE HERE */
-}
+    const newArray = runners.filter(function(T) {
+            return T.shirt_size == tShirtSize
+        })
+        console.log(newArray) 
+        return newArray
+    }
 
-/////////////// CLOSURES ///////////////
-/////////////// CLOSURES ///////////////
+    /**
+     * ### Challenge `tallyUpDonations`
+     * 
+     * @instructions
+     * The donations need to be tallied up and reported for tax purposes.
+     * Implement this function using reduce().
+     * 
+     * @param runners array of runners like the one inside the /data/runners.js file.
+     * @returns a number which is the sum of the donations by all runners.
+     */
+    function tallyUpDonations( /* CODE HERE */ ) {
+        /* CODE HERE */
+    }
 
-/**
- * ### Challenge `counterMaker`
- * 
- * @instructions
- * Fix this function so a counter produced with it will increment correctly!
- * Usage is as follows:
- * 
- * const counter = counterMaker()
- * counter() // should return 0
- * counter() // should return 1
- * counter() // should return 2
- * etc
-*/
-function counterMaker() {
-  // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
-  }
-  // BROKEN CODE ENDS
-}
+    /////////////// CLOSURES ///////////////
+    /////////////// CLOSURES ///////////////
 
-/**
- * ### Challenge `counterMakerWithLimit`
- * 
- * @instructions
- * Implement a counter maker that takes a max value for the count.
- * A counter created with it will reset itself after reaching the max value.
- * Usage is as follows:
- * 
- * const counter = counterMakerWithLimit(3)
- * counter() // should return 0
- * counter() // should return 1
- * counter() // should return 2
- * counter() // should return 3
- * counter() // should return 0
- * counter() // should return 1
- * counter() // should return 2
- * counter() // should return 3
- * counter() // should return 0
- * etc
-*/
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
-}
+    /**
+     * ### Challenge `counterMaker`
+     * 
+     * @instructions
+     * Fix this function so a counter produced with it will increment correctly!
+     * Usage is as follows:
+     * 
+     * const counter = counterMaker()
+     * counter() // should return 0
+     * counter() // should return 1
+     * counter() // should return 2
+     * etc
+     */
+    function counterMaker() {
+        // BROKEN CODE STARTS
+        const count = 0;
 
-/////////////// END OF CHALLENGE ///////////////
-/////////////// END OF CHALLENGE ///////////////
-/////////////// END OF CHALLENGE ///////////////
+        function counter() {
+            ++count
+        }
+        // BROKEN CODE ENDS
+    }
 
-if (typeof exports !== 'undefined') {
-  // IGNORE: Test/Env Detected
-  // For Node/Non-browser test env
-  module.exports = module.exports || {}
-  if (processFirstItem) { module.exports.processFirstItem = processFirstItem }
-  if (processLength) { module.exports.processLength = processLength }
-  if (processLastItem) { module.exports.processLastItem = processLastItem }
-  if (processSum) { module.exports.processSum = processSum }
-  if (processProduct) { module.exports.processProduct = processProduct }
-  if (processContains) { module.exports.processContains = processContains }
-  if (processDuplicateFree) { module.exports.processDuplicateFree = processDuplicateFree }
-  if (getFullNames) { module.exports.getFullNames = getFullNames }
-  if (firstNamesAllCaps) { module.exports.firstNamesAllCaps = firstNamesAllCaps }
-  if (getRunnersByTShirtSize) { module.exports.getRunnersByTShirtSize = getRunnersByTShirtSize }
-  if (tallyUpDonations) { module.exports.tallyUpDonations = tallyUpDonations }
-  if (counterMaker) { module.exports.counterMaker = counterMaker }
-  if (counterMakerWithLimit) { module.exports.counterMakerWithLimit = counterMakerWithLimit }
-}
+    /**
+     * ### Challenge `counterMakerWithLimit`
+     * 
+     * @instructions
+     * Implement a counter maker that takes a max value for the count.
+     * A counter created with it will reset itself after reaching the max value.
+     * Usage is as follows:
+     * 
+     * const counter = counterMakerWithLimit(3)
+     * counter() // should return 0
+     * counter() // should return 1
+     * counter() // should return 2
+     * counter() // should return 3
+     * counter() // should return 0
+     * counter() // should return 1
+     * counter() // should return 2
+     * counter() // should return 3
+     * counter() // should return 0
+     * etc
+     */
+    function counterMakerWithLimit( /* CODE HERE */ ) {
+        /* CODE HERE */
+    }
+
+    /////////////// END OF CHALLENGE ///////////////
+    /////////////// END OF CHALLENGE ///////////////
+    /////////////// END OF CHALLENGE ///////////////
+
+    if (typeof exports !== 'undefined') {
+        // IGNORE: Test/Env Detected
+        // For Node/Non-browser test env
+        module.exports = module.exports || {}
+        if (processFirstItem) { module.exports.processFirstItem = processFirstItem }
+        if (processLength) { module.exports.processLength = processLength }
+        if (processLastItem) { module.exports.processLastItem = processLastItem }
+        if (processSum) { module.exports.processSum = processSum }
+        if (processProduct) { module.exports.processProduct = processProduct }
+        if (processContains) { module.exports.processContains = processContains }
+        if (processDuplicateFree) { module.exports.processDuplicateFree = processDuplicateFree }
+        if (getFullNames) { module.exports.getFullNames = getFullNames }
+        if (firstNamesAllCaps) { module.exports.firstNamesAllCaps = firstNamesAllCaps }
+        if (getRunnersByTShirtSize) { module.exports.getRunnersByTShirtSize = getRunnersByTShirtSize }
+        if (tallyUpDonations) { module.exports.tallyUpDonations = tallyUpDonations }
+        if (counterMaker) { module.exports.counterMaker = counterMaker }
+        if (counterMakerWithLimit) { module.exports.counterMakerWithLimit = counterMakerWithLimit }
+    }
