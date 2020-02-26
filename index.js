@@ -135,7 +135,6 @@ function processSum(numberList, cb) {
  */
 function processProduct(num1, num2, cb) {
     const answer = num1 * num2
-    console.log(answer)
     return cb(answer)
 }
 
@@ -222,7 +221,7 @@ function getFullNames(runners) { //Works but not in the browser
         full_names.push(`${element.last_name}, ${element.first_name}`)
     })
 
-    console.log(full_names)
+    // console.log(full_names)
     return full_names
 }
 
@@ -244,7 +243,7 @@ function firstNamesAllCaps(runners) {
     const fNames = runners.map(function(element, i) {
         return element.first_name.toUpperCase()
     })
-    console.log(fNames)
+    // console.log(fNames)
     return (fNames)
 }
 
@@ -266,7 +265,7 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
     const newArray = runners.filter(function(T) {
         return T.shirt_size == tShirtSize
     })
-    console.log(newArray)
+    // console.log(newArray)
     return newArray
 }
 
@@ -306,13 +305,29 @@ function tallyUpDonations(runners) {
  */
 function counterMaker() {
     // BROKEN CODE STARTS
-    const count = 0;
+    var count = -1;
 
-    function counter() {
-        ++count
+    return function counter () {
+      ++count
+        console.log(count)
+        return count
     }
     // BROKEN CODE ENDS
 }
+
+// function counterMaker() {
+//   // BROKEN CODE STARTS
+//   let count = -1;
+
+//   function counter () {
+
+//       return ++count
+//   }
+//   return counter
+//   // BROKEN CODE ENDS
+// }
+// const nc = counterMaker()
+// console.log(nc())
 
 /**
  * ### Challenge `counterMakerWithLimit`
