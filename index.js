@@ -105,12 +105,12 @@ function processSum(numberList, cb){
 }
 
 
-const numbers = [1,2,3, ]
-console.log("numbers: " + numbers)
-const sum = numbers.reduce((a,b)=>{
-  return a+b;
-})
-console.log(`Sum of numbers: ${sum}`)
+// const numbers = [1,2,3, ]
+// console.log("numbers: " + numbers)
+// const sum = numbers.reduce((a,b)=>{
+//   return a+b;
+// })
+// console.log(`Sum of numbers: ${sum}`)
 
 // console.log(processSum([1,2,3]),sum)
 
@@ -194,7 +194,12 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 // 50 small businesses to make a small donation on their behalf for some much needed
 // updates to their facilities. Each business has assigned a representative
 // to attend the event along with a small donation.
-
+// var runners = [
+//   { id: 1, first_name: "Charmain", last_name: "Seiler", email: "cseiler0@wired.com", shirt_size: "2XL", company_name: "Divanoodle", donation: 75 },
+//   { id: 2, first_name: "Whitaker", last_name: "Ierland", email: "wierland1@angelfire.com", shirt_size: "2XL", company_name: "Wordtune", donation: 148 },
+//   { id: 5, first_name: "dddd", last_name: "dddd", email: "wierland1@angelfire.com", shirt_size: "2XL", company_name: "Wordtune", donation: 148 },
+//   { id: 3, first_name: "Julieta", last_name: "McCloid", email: "jmccloid2@yahoo.com", shirt_size: "S", company_name: "Riffpedia", donation: 171 }
+// ]
 /**
  * ### Challenge `getFullNames`
  * 
@@ -205,10 +210,23 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+
+
+function getFullNames(runners) { //Works but not in the browser
+  const full_names = []
+  runners.forEach(function (element){
+    // your code here
+
+    // console.log(`${element.last_name}, ${element.first_name}`)
+    full_names.push(`${element.last_name}, ${element.first_name}`)
+  })
+
+  console.log(full_names)
+  return full_names
 }
 
+
+// console.log(runners)
 /**
  * ### Challenge `firstNamesAllCaps`
  * 
